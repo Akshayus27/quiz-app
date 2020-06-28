@@ -1,2 +1,2 @@
 # quiz-app
-mern-atack-app
+mern-stack-app
