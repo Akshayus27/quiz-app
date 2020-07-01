@@ -11,12 +11,16 @@ app.use('/', route)
 
 const PORT = process.env.PORT || 4000
 
-mongoose.connect('mongodb://localhost:27017/Quiz', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true} , (err) => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Quiz', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true} , (err) => {
     if(!err) console.log('Connected to the database...')
     else{
         console.log(err)
     }
 })
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'))
+}
 
 app.listen(PORT, () => {
     console.log(`Server up and running on port: ${PORT}`)
