@@ -49,7 +49,7 @@ class Login extends Component {
             password: this.state.password
         }
 
-        await axios.post(`http://localhost:4000/login`, login)
+        await axios.post(`/login`, login)
             .then(async res => {
                 if (res.status === 200) {
                     await this.setState({
