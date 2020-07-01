@@ -51,7 +51,7 @@ class Register extends Component {
             password: this.state.password
         }
 
-        await axios.post(`http://localhost:4000/register`, register)
+        await axios.post(`/register`, register)
             .then(async res => {
                 alert(res.data)
                 if (res.data === 'Registered Successfully!') {
