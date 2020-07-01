@@ -34,7 +34,7 @@ class Question extends Component {
         try {
 
             if (this.props.location.user.login) {
-                await axios.get(`http://localhost:4000/quiz`)
+                await axios.get(`/quiz`)
                     .then(async res => {
                         start = this.start()
                         await this.setState({
