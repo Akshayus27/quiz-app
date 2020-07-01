@@ -31,7 +31,7 @@ class GameOver extends Component {
                     }
                 }
 
-                await axios.put(`http://localhost:4000/gameover/${this.props.location.user.email}/${this.props.location.user.points + this.state.currentPoints}`)
+                await axios.put(`/gameover/${this.props.location.user.email}/${this.props.location.user.points + this.state.currentPoints}`)
                     .then()
                     .catch(err => alert(err))
             } else {

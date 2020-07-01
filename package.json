@@ -21,6 +21,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.17",
     "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
     "validator": "^13.1.1"
   }
 }
