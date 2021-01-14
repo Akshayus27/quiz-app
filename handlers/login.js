@@ -6,7 +6,7 @@ exports.getIn = async function(req, res){
 
     await Register.find({email: req.body.email}, (err, users) => {
         
-        if(err) return res.senStatus(401)
+        if(err) return res.sendStatus(401)
         
         const user = users ? users[0] : []
        if(user){
