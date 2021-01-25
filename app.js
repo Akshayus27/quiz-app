@@ -11,9 +11,7 @@ app.use('/', route)
 
 const PORT = process.env.PORT || 4000
 
-const uri = "mongodb+srv://akshayus27:1LYPkgoJ6gXwV8sY@quiz-mern-stack.jfjpp.mongodb.net/quiz?retryWrites=true&w=majority"
-
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false} , (err) => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Quiz', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false} , (err) => {
     if(!err) console.log('Connected to the database...')
     else{
         console.log(err)
