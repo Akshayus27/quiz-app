@@ -11,7 +11,7 @@ app.use('/', route)
 
 const PORT = process.env.PORT || 4000
 
-const uri = "mongodb+srv://akshayus27:1LYPkgoJ6gXwV8sY@quiz-mern-stack.jfjpp.mongodb.net/quiz?retryWrites=true&w=majority"
+const uri = "mongodb+srv://<uername>:<password>@quiz-mern-stack.jfjpp.mongodb.net/quiz?retryWrites=true&w=majority"
 
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false} , (err) => {
     if(!err) console.log('Connected to the database...')
